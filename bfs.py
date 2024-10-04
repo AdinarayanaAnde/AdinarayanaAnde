@@ -1,6 +1,6 @@
 import queue
 
-def dfs(search_node, start_node, graph):
+def bfs(search_node, start_node, graph):
   visited_nodes = set()
   queued_connected_nodes_of = set()
   q = queue.Queue()
@@ -28,5 +28,5 @@ graph = {'A': {'B', 'C'},
          'E': {'B', 'F'},
          'F': {'A', 'C', 'E', 'Z'},
          'Z':{'F'}}
-result = dfs(search_node, start_node, graph)
+result = bfs(search_node, start_node, graph)
 print(result)
